@@ -1,0 +1,268 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('website_background.jpg');
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-height: 110px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #f8eeee;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #eeedf6;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #18124f;
+}
+
+nav ul li a:hover {
+  background-color: #50a9dc;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section {
+  flex: 1 1 100%;
+  margin: 10px;
+  padding: 1px;
+  background-color: #180e38f0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(5, 5, 5, 0.1);
+  position: relative; 
+}
+
+h2 {
+  color: #f2e5e5;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-decoration: wavy;
+}
+
+.subpoints-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.subpoint {
+  flex: 1;
+  padding: 70px;
+  background-color: #120547;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.subpoint h3 {
+  color: #f5f4f4;
+  margin-bottom: 5px;
+}
+
+.subpoint p {
+  color: #f3e8e8;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Box style */
+.box-style {
+  text-align: center;
+  text-shadow: #333;
+  width: 200px;
+  height: 65px;
+  background-color: #122e54;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 1px;
+  cursor: pointer;
+  
+}
+
+@media screen and (max-width: 768px) {
+  main {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  section {
+      width: 100%;
+      position: relative;
+      margin: 10px 0;
+  }
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .subpoint {
+      flex: 1 1 45%; 
+      margin-bottom: 10px; 
+  }
+
+  .subpoint.hidden {
+      display: none; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav ul {
+      display: none;
+  }
+  header nav .menu-icon {
+      display: block; 
+  }
+  header nav.active ul {
+      display: block;
+  }
+  .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: white; 
+      transition: 0.3s;
+      overflow-y: auto; 
+      padding-top: 20px; 
+      z-index: 9999;
+  }
+  .sidebar.active {
+      right: 0;
+  }
+  .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  .sidebar ul li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+  }
+  .sidebar ul li:last-child {
+      border-bottom: none;
+  }
+  .sidebar ul li a {
+      color: rgb(8, 7, 7); 
+      text-decoration: none;
+  }
+  .sidebar ul li a:hover {
+      background-color: #f0f0f0; 
+  }
+}
+
+
+/* Adjustments for larger screens */
+@media screen and (min-width: 769px) {
+  header nav ul {
+      display: flex; 
+  }
+  header nav .menu-icon {
+      display: none; 
+  }
+  .sidebar {
+      display: none;
+  }
+}
+
+
+#online, #interview, #public-data, #health {
+  color: rgb(224, 224, 237); 
+
+}
+
+/* Additional styles for the arrow */
+#external {
+  position: relative;
+}
+#external .arrow {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 35px;
+  cursor: pointer;
+  color:aliceblue;
+}
+
+/* Styling for the graph */
+
+.graph-box {
+  display: none; 
+  position: absolute;
+  background-color: #c0e1e3;
+  padding: 10px;
+  z-index: 999;
+  color:black;
+}
+
+.subpoint:hover .graph-box {
+  display: block; 
+  top: 0;
+  left: calc(100% + 5px); 
+  height: auto; 
+}
+
+
+.graph-box h4 {
+  margin-top: 0;
+}
+
+.graph {
+  border: 1px solid;
+  height: 150px; 
+  margin-bottom: 5px;
+  background-color: aquamarine;
+}
+
+.graph-box .data p {
+  color: rgb(10, 10, 10); 
+}
+
+.graph-box .data p .total-review {
+  color: blue; 
+}
+
+.graph-box .data p .negative {
+  color: red; 
+}
+
+.graph-box .data p .positive {
+  color: green;
+}
+
+.graph-box .data p .comments {
+  color: orange;
+}

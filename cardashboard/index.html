@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Manufacturing Dashboard</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Car Manufacturing Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#planning">Planning</a></li>
+                    <li><a href="#desiging">Designing</a></li>
+                    <li><a href="#manufacturing">Manufacturing</a></li>
+                    <li><a href="#salesmarketing">Sales/Marketing</a></li>
+                </ul>
+                <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+            </nav>
+        </header>
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#planning">Planning</a></li>
+                <li><a href="#desiging">Designing</a></li>
+                <li><a href="#manufacturing">Manufacturing</a></li>
+                <li><a href="#salesmarketing">Sales/Marketing</a></li>
+            </ul>
+        </div>
+        <main>
+            <section id="research" class="phase" onclick="toggleResearch()">
+                <div class="subpoints-container">
+                    <div class="subpoint research  box-style">
+                        <h2>Research</h2>
+                    </div>
+                </div>
+            </section>
+            <div id="external" class="subpoint hidden">
+                <h3>External</h3>
+                <!-- Arrow for toggling -->
+                <div class="arrow" onclick="toggleB2C()">></div>
+            </div>
+            
+            <div id="internal" class="subpoint hidden">
+                <h3>Internal</h3>
+                <p>Contents of Internal box</p>
+            </div>
+
+            <section id="planning" class="phase" onclick="togglePlanning()">
+                <div class="subpoints-container">
+                    <div class="subpoint planning box-style">
+                <h2>Planning</h2>
+            </section>
+            <div id="prd" class="subpoint hidden">
+                <h3>PRD</h3>
+                <p>Contents of PRD box</p>
+            </div>
+            <div id="specs" class="subpoint hidden">
+                <h3>Specs</h3>
+                <p>Contents of Specs box</p>
+            </div>
+
+            
+            <section id="desiging" class="phase" onclick="toggleDesiging()">
+                <div class="subpoints-container">
+                    <div class="subpoint desiging box-style">
+                <h2>Designing</h2>
+            </section>
+            <div id="hardware" class="subpoint hidden">
+                <h3>Hardware</h3>
+                <p>Contents of Hardware box</p>
+            </div>
+            <div id="software" class="subpoint hidden">
+                <h3>Software</h3>
+                <p>Contents of Software box</p>
+            </div>
+
+            <section id="manufacturing" class="phase" onclick="toggleManufacturing()">
+                <div class="subpoints-container">
+                    <div class="subpoint manufacturing box-style">
+                <h2>Manufacturing</h2>
+            </section>
+            <div id="material" class="subpoint hidden">
+                <h3>Material</h3>
+                <p>Contents of Material> box</p>
+            </div>
+            <div id="production" class="subpoint hidden">
+                <h3>Production</h3>
+                <p>Contents of Production box</p>
+            </div>
+
+            <section id="salesmarketing" class="phase" onclick="toggleSalesMarketing()">
+                <div class="subpoints-container">
+                    <div class="subpoint salesmarketing box-style">
+                <h2>Sales/Marketing</h2>
+            </section>
+            <div id="online-box" class="subpoint hidden">
+                <h3>Online</h3>
+                <p>Contents of Online box</p>
+            </div>
+            <div id="dealearship-box" class="subpoint hidden">
+                <h3>Dealearship</h3>
+                <p>Contents of Dealearship box</p>
+            </div> 
+            
+        </main>
+        <footer>
+            <p>&copy; 2024 Car Manufacturing Company</p>
+        </footer>
+    </div>
+    <script src="dash.js"></script>
+</body>
+</html>
